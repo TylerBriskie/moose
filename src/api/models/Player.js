@@ -12,6 +12,10 @@ const PlayerSchema = new mongoose.Schema({
   score: {
     type: Number,
     default: 0
+  },
+  displayName: {
+    type: String,
+    required: true,
   }
 });
 

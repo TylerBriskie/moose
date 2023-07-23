@@ -1,14 +1,13 @@
 const User = require('../models/User');
 
 module.exports = {
-  userSignup: async (req, res) => {
-      // Create a new user
+  getPlayerDetails: async (req, res) => {
+      // Instantiate a new game
 
     console.log(req);
 
-    const { name, email, password } = req.body;
-    let user = new User({ name, email, password });
-
+    const {playerId } = req.body;
+    
     try {
       await user.save();
       res.json(user);

@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
 const GameSchema = new mongoose.Schema({
-    players: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Player'
-    }],
-
     startDate: {
       type: Date,
       default: Date.now
